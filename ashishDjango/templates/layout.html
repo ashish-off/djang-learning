@@ -1,20 +1,15 @@
-{% comment %} layout.html {% endcomment %}
-{% load static %}
+{% load static tailwind_tags %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css'%}">
-    <title>
-        {% block title %}
-        Default value fir title
-        {% endblock  %}
-    </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+    <title>{% block title %} Default value fir title {% endblock %}</title>
+    {% tailwind_css %}
+  </head>
+  <body>
     <nav>This is our navbar</nav>
-    {% block content %}{% endblock  %}
-    
-</body>
+    {% block content %}{% endblock %}
+  </body>
 </html>
